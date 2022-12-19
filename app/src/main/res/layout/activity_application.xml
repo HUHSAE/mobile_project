@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplicationActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="354dp"
+        android:layout_height="658dp"
+        android:layout_marginLeft="30dp"
+        app:srcCompat="@drawable/background"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="190dp"
+        android:layout_height="37dp"
+        app:srcCompat="@drawable/basic_tle"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="74dp"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="Input Name"
+        android:inputType="textPersonName"
+        android:textSize="16dp"/>
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="190dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/edit_id"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="48dp"
+        app:srcCompat="@drawable/basic_tle" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_id"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="53dp"
+        android:text="Mail Address"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    <EditText
+        android:id="@+id/edit_id1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView3"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:ems="15"
+        android:hint="Input Mail Address"
+        android:inputType="textEmailAddress"
+        android:textSize="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="190dp"
+        android:layout_height="37dp"
+        android:layout_below="@id/edit_id1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="48dp"
+        app:srcCompat="@drawable/basic_tle" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_id1"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="53dp"
+        android:text="Address"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    <EditText
+        android:id="@+id/edit_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView4"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:ems="15"
+        android:hint="Input Postal Address"
+        android:inputType="textPostalAddress"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_id2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/notice"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/completion"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notice"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="74dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Completion" />
+
+
+</RelativeLayout>
