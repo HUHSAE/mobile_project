@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "My Application"
+include ':app'
+include ':webview'
+include ':recommend'
+include ':buttonactivityswitch'
+include ':webuttonswitch'
+include ':googlemap'
+include ':googlemaps'
+include ':googlemap2'
+include ':Update_JOO-master'
+include ':mapgoogle'
+include ':library'

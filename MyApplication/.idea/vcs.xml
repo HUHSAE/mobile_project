@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/MyApplication2/mobile_project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MyApplication2/webview" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/webuttonswitch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/webuttonswitch/KotlinPractice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/webuttonswitch/Kotlin_Practice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/webview" vcs="Git" />
+  </component>
+</project>
