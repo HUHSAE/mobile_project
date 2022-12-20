@@ -1,15 +1,146 @@
 package com.example.myapp
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapp.databinding.ActivityStampBinding
-
+import com.journeyapps.barcodescanner.ScanContract
+import com.journeyapps.barcodescanner.ScanIntentResult
+import com.journeyapps.barcodescanner.ScanOptions
 
 
 class StampActivity:AppCompatActivity(){
-    val stamp_value=0
+    var stamp_value=0
+
+    lateinit var txtResult:TextView
+    lateinit var imageButton : ImageButton
+    lateinit var imageButton2 : ImageButton
+    lateinit var imageButton3 : ImageButton
+    lateinit var imageButton4 : ImageButton
+    lateinit var imageButton5 : ImageButton
+    lateinit var imageButton6 : ImageButton
+    var distinct1=0
+    var distinct2=0
+    var distinct3=0
+    var distinct4=0
+    var distinct5=0
+    var distinct6=0
+
+
+    // 스캐너 설정
+    val barcodeLauncher = registerForActivityResult(
+        ScanContract()
+    ) { result: ScanIntentResult ->
+        // result : 스캔된 결과
+
+        // 내용이 없다면
+        if (result.contents == null) {
+            Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
+        }
+        else if(result.contents=="https://www.nseoultower.co.kr:8501/" && distinct1==0){ // 내용이 있다면 1번
+
+            // 1. Toast 메시지 출력.
+            Toast.makeText(
+                this,
+                "Scanned: " + result.contents,
+                Toast.LENGTH_LONG
+            ).show()
+
+            // 2. 결과 값 TextView에 출력.
+            txtResult.text = result.contents.toString()
+            stamp_value++ // 값 추가
+            imageButton.setImageResource(R.drawable.after_stamp)
+            distinct1=1
+        }
+        else if(result.contents=="https://www.royalpalace.go.kr"&& distinct2==0){ // 내용이 있다면 2번
+
+            // 1. Toast 메시지 출력.
+            Toast.makeText(
+                this,
+                "Scanned: " + result.contents,
+                Toast.LENGTH_LONG
+            ).show()
+
+            // 2. 결과 값 TextView에 출력.
+            txtResult.text = result.contents.toString()
+            stamp_value++ // 값 추가
+            imageButton2.setImageResource(R.drawable.after_stamp)
+            distinct2=1
+        }
+        else if(result.contents=="https://www.museum.go.kr/site/main/home"&& distinct3==0){ // 내용이 있다면 3번
+
+            // 1. Toast 메시지 출력.
+            Toast.makeText(
+                this,
+                "Scanned: " + result.contents,
+                Toast.LENGTH_LONG
+            ).show()
+
+            // 2. 결과 값 TextView에 출력.
+            txtResult.text = result.contents.toString()
+            stamp_value++ // 값 추가
+            imageButton3.setImageResource(R.drawable.after_stamp)
+            distinct3=1
+        }
+        else if(result.contents=="https://ddp.or.kr/?menuno=228"&& distinct4==0){ // 내용이 있다면 4번
+
+            // 1. Toast 메시지 출력.
+            Toast.makeText(
+                this,
+                "Scanned: " + result.contents,
+                Toast.LENGTH_LONG
+            ).show()
+
+            // 2. 결과 값 TextView에 출력.
+            txtResult.text = result.contents.toString()
+            stamp_value++ // 값 추가
+            imageButton4.setImageResource(R.drawable.after_stamp)
+            distinct4=1
+        }
+        else if(result.contents=="https://hangang.seoul.go.kr/archives/46758"&& distinct5==0){ // 내용이 있다면 5번
+
+            // 1. Toast 메시지 출력.
+            Toast.makeText(
+                this,
+                "Scanned: " + result.contents,
+                Toast.LENGTH_LONG
+            ).show()
+
+            // 2. 결과 값 TextView에 출력.
+            txtResult.text = result.contents.toString()
+            stamp_value++ // 값 추가
+            imageButton5.setImageResource(R.drawable.after_stamp)
+            distinct5=1
+        }
+        else if(result.contents=="https://www.gjmarket.org"&& distinct6==0){ // 내용이 있다면 6번
+
+            // 1. Toast 메시지 출력.
+            Toast.makeText(
+                this,
+                "Scanned: " + result.contents,
+                Toast.LENGTH_LONG
+            ).show()
+
+            // 2. 결과 값 TextView에 출력.
+            txtResult.text = result.contents.toString()
+            stamp_value++ // 값 추가
+            imageButton6.setImageResource(R.drawable.after_stamp)
+            distinct6=1
+        }
+
+
+    }
+
+    fun onScanButtonClicked() {
+        // Launch ( SCAN 실행 )
+        barcodeLauncher.launch(ScanOptions())
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,10 +179,18 @@ class StampActivity:AppCompatActivity(){
             startActivity(intent)
         }
 
+        txtResult = findViewById(R.id.txtResult)
+        imageButton=findViewById(R.id.imageButton1)
+        imageButton2=findViewById(R.id.imageButton2)
+        imageButton3=findViewById(R.id.imageButton3)
+        imageButton4=findViewById(R.id.imageButton4)
+        imageButton5=findViewById(R.id.imageButton5)
+        imageButton6=findViewById(R.id.imageButton6)
 
         binding.btnScan.setOnClickListener{
-            //이 부분 아직 덜 구현했음
+            onScanButtonClicked()
         } // 바코드 인식기로 넘어가기
+
 
         if(stamp_value==6){
             binding.applicationButton.setEnabled(true)

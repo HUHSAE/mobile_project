@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         val moveButton1 = findViewById<Button>(R.id.button1)
         moveButton1.setOnClickListener{
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://papago.naver.com/"))

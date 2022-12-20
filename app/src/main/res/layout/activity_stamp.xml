@@ -77,6 +77,20 @@
         android:layout_toRightOf="@+id/imageButton5"
         android:layout_marginLeft="8dp"/>
 
+    <TextView
+        android:padding="10dp"
+        android:text="결과 텍스트"
+        android:background="#eaeaea"
+        android:id="@+id/txtResult"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnScan"
+        android:textAlignment="center"
+        android:layout_margin="10dp"
+        />
+
     <Button
         android:id="@+id/application_button"
         android:layout_width="145dp"
