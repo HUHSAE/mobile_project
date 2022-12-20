@@ -60,7 +60,7 @@ class StampActivity:AppCompatActivity(){
 
             // 2. 결과 값 TextView에 출력.
             stamp_value++ // 값 추가
-            txtResult.text = stamp_value.toString()
+            txtResult.text = "SUCCESS!"
             imageButton.setImageResource(R.drawable.after_stamp)
             distinct1=1
             if(stamp_value==6){
@@ -79,7 +79,7 @@ class StampActivity:AppCompatActivity(){
 
             // 2. 결과 값 TextView에 출력.
             stamp_value++ // 값 추가
-            txtResult.text = stamp_value.toString()
+            txtResult.text = "SUCCESS!"
             imageButton2.setImageResource(R.drawable.after_stamp)
             distinct2=1
             if(stamp_value==6){
@@ -98,7 +98,7 @@ class StampActivity:AppCompatActivity(){
 
             // 2. 결과 값 TextView에 출력.
             stamp_value++ // 값 추가
-            txtResult.text = stamp_value.toString()
+            txtResult.text = "SUCCESS!"
             imageButton3.setImageResource(R.drawable.after_stamp)
             distinct3=1
             if(stamp_value==6){
@@ -117,7 +117,7 @@ class StampActivity:AppCompatActivity(){
 
             // 2. 결과 값 TextView에 출력.
             stamp_value++ // 값 추가
-            txtResult.text = stamp_value.toString()
+            txtResult.text = "SUCCESS!"
             imageButton4.setImageResource(R.drawable.after_stamp)
             distinct4=1
             if(stamp_value==6){
@@ -136,7 +136,7 @@ class StampActivity:AppCompatActivity(){
 
             // 2. 결과 값 TextView에 출력.
             stamp_value++ // 값 추가
-            txtResult.text = stamp_value.toString()
+            txtResult.text = "SUCCESS!"
             imageButton5.setImageResource(R.drawable.after_stamp)
             distinct5=1
             if(stamp_value==6){
@@ -155,7 +155,7 @@ class StampActivity:AppCompatActivity(){
 
             // 2. 결과 값 TextView에 출력.
             stamp_value++ // 값 추가
-            txtResult.text = stamp_value.toString()
+            txtResult.text = "SUCCESS!"
             imageButton6.setImageResource(R.drawable.after_stamp)
             distinct6=1
             if(stamp_value==6){
