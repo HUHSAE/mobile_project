@@ -17,64 +17,65 @@
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
         <activity
-            android:name=".ScanQRActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".ApplicationActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".CompletionActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".StampActivity6"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".StampActivity5"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".StampActivity4"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".StampActivity3"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".StampActivity2"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".StampActivity1"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -88,14 +89,16 @@
         </activity>
         <activity
             android:name=".StampActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Stamp Tour">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Seoul Tour">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
