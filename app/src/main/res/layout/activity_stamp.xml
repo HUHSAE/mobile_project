@@ -9,109 +9,112 @@
 
     <ImageView
         android:id="@+id/background"
-        android:layout_width="354dp"
-        android:layout_height="658dp"
-        android:layout_marginLeft="25dp"
+        android:layout_width="320dp"
+        android:layout_height="509dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="20dp"
         app:srcCompat="@drawable/background"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="37dp" />
 
     <ImageButton
         android:id="@+id/imageButton1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="47dp"
         android:layout_marginTop="60dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/before_stamp" />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@+id/imageButton1"
         android:layout_marginTop="60dp"
+        android:layout_toRightOf="@+id/imageButton1"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/before_stamp" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_below="@+id/imageButton1"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="47dp"
         android:layout_marginTop="2dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/before_stamp" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/before_stamp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_below="@+id/imageButton2"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:layout_toRightOf="@+id/imageButton3"
-        android:layout_marginLeft="8dp"/>
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/before_stamp" />
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_below="@+id/imageButton3"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="47dp"
         android:layout_marginTop="2dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/before_stamp" />
 
     <ImageButton
         android:id="@+id/imageButton6"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/before_stamp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_below="@+id/imageButton4"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
         android:layout_toRightOf="@+id/imageButton5"
-        android:layout_marginLeft="8dp"/>
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/before_stamp" />
 
     <TextView
-        android:padding="10dp"
-        android:text="결과 텍스트"
-        android:background="#eaeaea"
         android:id="@+id/txtResult"
-        android:textSize="15sp"
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btnScan"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0B65AA"
+        android:padding="10dp"
+        android:text="Result Text"
         android:textAlignment="center"
-        android:layout_margin="10dp"
-        />
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/btnScan"/>
 
     <Button
         android:id="@+id/application_button"
         android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageButton6"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#3F51B5"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#676666"
         android:text="Application"
         android:textColor="@color/white"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/btnScan"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
         android:layout_below="@id/imageButton6"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
         android:layout_toRightOf="@+id/application_button"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="15dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/qr_scan"/>
+        app:srcCompat="@drawable/qr_scan" />
 
 </RelativeLayout>

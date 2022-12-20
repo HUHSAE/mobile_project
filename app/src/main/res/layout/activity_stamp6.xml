@@ -8,17 +8,18 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="354dp"
-        android:layout_height="658dp"
-        android:layout_marginLeft="30dp"
+        android:layout_width="320dp"
+        android:layout_height="509dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="22dp"
         app:srcCompat="@drawable/background"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="37dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="346dp"
-        android:layout_height="205dp"
+        android:layout_width="292dp"
+        android:layout_height="179dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="60dp"
         app:srcCompat="@drawable/stamp6" />
@@ -28,36 +29,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="90dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="75dp"
         android:text="Name : Gwangjang Market"
-        android:textSize="20dp"
+        android:textSize="17dp"
         android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="324dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="4dp"
         app:srcCompat="@drawable/ll"/>
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="315dp"
-        android:layout_height="210dp"
+        android:layout_width="263dp"
+        android:layout_height="172dp"
         android:layout_below="@id/imageView5"
         android:layout_marginLeft="55dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
+        android:scrollbars="vertical"
         android:text="@string/six"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:scrollbars="vertical"/>
+        android:textSize="15dp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="324dp"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView1"
         android:layout_marginLeft="40dp"
@@ -69,9 +70,9 @@
         android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView6"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:backgroundTint="#3F51B5"
         android:text="Site Link!"
-        android:layout_marginLeft="130dp"/>
+        android:layout_marginLeft="110dp"/>
 
 </RelativeLayout>

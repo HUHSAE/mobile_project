@@ -1,6 +1,8 @@
 package com.example.myapp
 
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.media.Image
 import android.os.Bundle
 import android.view.View
@@ -13,6 +15,8 @@ import com.example.myapp.databinding.ActivityStampBinding
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
+import android.util.Log
+import androidx.core.content.ContextCompat.startActivity
 
 
 class StampActivity:AppCompatActivity(){
@@ -32,6 +36,8 @@ class StampActivity:AppCompatActivity(){
     var distinct5=0
     var distinct6=0
 
+    lateinit var button: Button
+
 
     // 스캐너 설정
     val barcodeLauncher = registerForActivityResult(
@@ -43,7 +49,7 @@ class StampActivity:AppCompatActivity(){
         if (result.contents == null) {
             Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
         }
-        else if(result.contents=="https://www.nseoultower.co.kr:8501/" && distinct1==0){ // 내용이 있다면 1번
+        else if(result.contents=="https://www.nseoultower.co.kr:8501" && distinct1==0){ // 내용이 있다면 1번
 
             // 1. Toast 메시지 출력.
             Toast.makeText(
@@ -53,10 +59,14 @@ class StampActivity:AppCompatActivity(){
             ).show()
 
             // 2. 결과 값 TextView에 출력.
-            txtResult.text = result.contents.toString()
             stamp_value++ // 값 추가
+            txtResult.text = stamp_value.toString()
             imageButton.setImageResource(R.drawable.after_stamp)
             distinct1=1
+            if(stamp_value==6){
+                button.isEnabled=true
+                button.setBackgroundResource(R.color.main)
+            }
         }
         else if(result.contents=="https://www.royalpalace.go.kr"&& distinct2==0){ // 내용이 있다면 2번
 
@@ -68,10 +78,14 @@ class StampActivity:AppCompatActivity(){
             ).show()
 
             // 2. 결과 값 TextView에 출력.
-            txtResult.text = result.contents.toString()
             stamp_value++ // 값 추가
+            txtResult.text = stamp_value.toString()
             imageButton2.setImageResource(R.drawable.after_stamp)
             distinct2=1
+            if(stamp_value==6){
+                button.isEnabled=true
+                button.setBackgroundResource(R.color.main)
+            }
         }
         else if(result.contents=="https://www.museum.go.kr/site/main/home"&& distinct3==0){ // 내용이 있다면 3번
 
@@ -83,10 +97,14 @@ class StampActivity:AppCompatActivity(){
             ).show()
 
             // 2. 결과 값 TextView에 출력.
-            txtResult.text = result.contents.toString()
             stamp_value++ // 값 추가
+            txtResult.text = stamp_value.toString()
             imageButton3.setImageResource(R.drawable.after_stamp)
             distinct3=1
+            if(stamp_value==6){
+                button.isEnabled=true
+                button.setBackgroundResource(R.color.main)
+            }
         }
         else if(result.contents=="https://ddp.or.kr/?menuno=228"&& distinct4==0){ // 내용이 있다면 4번
 
@@ -98,10 +116,14 @@ class StampActivity:AppCompatActivity(){
             ).show()
 
             // 2. 결과 값 TextView에 출력.
-            txtResult.text = result.contents.toString()
             stamp_value++ // 값 추가
+            txtResult.text = stamp_value.toString()
             imageButton4.setImageResource(R.drawable.after_stamp)
             distinct4=1
+            if(stamp_value==6){
+                button.isEnabled=true
+                button.setBackgroundResource(R.color.main)
+            }
         }
         else if(result.contents=="https://hangang.seoul.go.kr/archives/46758"&& distinct5==0){ // 내용이 있다면 5번
 
@@ -113,10 +135,14 @@ class StampActivity:AppCompatActivity(){
             ).show()
 
             // 2. 결과 값 TextView에 출력.
-            txtResult.text = result.contents.toString()
             stamp_value++ // 값 추가
+            txtResult.text = stamp_value.toString()
             imageButton5.setImageResource(R.drawable.after_stamp)
             distinct5=1
+            if(stamp_value==6){
+                button.isEnabled=true
+                button.setBackgroundResource(R.color.main)
+            }
         }
         else if(result.contents=="https://www.gjmarket.org"&& distinct6==0){ // 내용이 있다면 6번
 
@@ -128,13 +154,15 @@ class StampActivity:AppCompatActivity(){
             ).show()
 
             // 2. 결과 값 TextView에 출력.
-            txtResult.text = result.contents.toString()
             stamp_value++ // 값 추가
+            txtResult.text = stamp_value.toString()
             imageButton6.setImageResource(R.drawable.after_stamp)
             distinct6=1
+            if(stamp_value==6){
+                button.isEnabled=true
+                button.setBackgroundResource(R.color.main)
+            }
         }
-
-
     }
 
     fun onScanButtonClicked() {
@@ -147,7 +175,8 @@ class StampActivity:AppCompatActivity(){
         val binding= ActivityStampBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.applicationButton.setEnabled(false) // 버튼 비활성화
+        binding.applicationButton.isEnabled=false// 버튼 비활성화
+
 
         binding.imageButton1.setOnClickListener{
             val intent = Intent(this, StampActivity1::class.java)
@@ -186,15 +215,11 @@ class StampActivity:AppCompatActivity(){
         imageButton4=findViewById(R.id.imageButton4)
         imageButton5=findViewById(R.id.imageButton5)
         imageButton6=findViewById(R.id.imageButton6)
+        button=findViewById(R.id.application_button)
 
         binding.btnScan.setOnClickListener{
             onScanButtonClicked()
         } // 바코드 인식기로 넘어가기
-
-
-        if(stamp_value==6){
-            binding.applicationButton.setEnabled(true)
-        } // 스탬프 다 모을시 버튼 활성화
 
         binding.applicationButton.setOnClickListener{
             val intent = Intent(this,ApplicationActivity::class.java)
